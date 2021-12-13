@@ -1,0 +1,140 @@
+*{
+    padding: 0;margin: 0;box-sizing: border-box;
+}
+body{
+    font-size: 15px;color: white;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+main{
+    min-height: 100vh;
+    background: hsl(233, 47%, 7%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.left{
+    grid-area: left;
+
+    display: flex;
+    flex-direction: column;
+    margin: 4rem;
+}
+h2{
+    font-size: 3rem;
+    font-weight: 700;
+}
+h3{
+    font-size: 2rem;
+    font-weight: 700;
+
+}
+p{
+    color: hsla(0, 0%, 100%, 0.75);
+}
+.leftTexto p {
+    font-size: 1.2rem;
+
+}
+.right{
+    grid-area: right;
+
+     background-image: url('./images/image-header-desktop.jpg');
+     background-color: hsl(277, 64%, 61%);
+     background-blend-mode:multiply;    
+     background-repeat: no-repeat;
+     background-size: 100% 100%;     
+     
+}
+span{
+    color: hsl(277, 64%, 61%);
+}
+.container{
+    min-height: 55vh;
+    width: 70vw;
+    max-width: 70vw;
+    background: hsl(244, 38%, 16%);
+    border-radius: 0.5rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-template-areas: "left right";    
+    overflow: hidden;
+
+}
+
+.leftTexto{
+    flex: 75%;
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.leftRedes{
+    flex: 25%;
+    max-width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    width: 100%;
+}
+.redes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.redes p{
+    
+    letter-spacing: 0.2rem;
+}
+
+@media (max-width:1025px) {
+    .container{
+        height: 95vh;
+        width: 90vw;
+        max-width: 90vw;
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 50%;
+        grid-template-areas: "right"   
+        "left";
+        text-align: center;
+        overflow:auto;
+        
+    }
+    .left{
+        margin: 1.5rem;
+        text-align: center;
+    }
+    .right{
+        background-image: url('./images/image-header-mobile.jpg');
+        max-width: 100%;
+        
+        
+    }
+    .leftTexto{
+        max-width: 100%;
+
+    }
+    .leftRedes{
+        max-width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+    h3{
+        font-size: 1.5rem;
+        margin-top: 1rem;
+    }
+    .redes p{
+    
+        letter-spacing: 0rem;
+    }
+    
+}
+@media (max-width:1026px){
+
+}
+
